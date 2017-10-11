@@ -3,7 +3,7 @@ class Listing < ApplicationRecord
   after_validation :geocode
 
   def country
-    ISO3166::Country.new(country_code.upcase)
+    ISO3166::Country.new('AU')
   end
 
   def full_address
